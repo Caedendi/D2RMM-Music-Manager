@@ -10,5 +10,6 @@ Possible features:
   - [Alternate Songs - Crypt-Tomb Switcheroo](https://www.nexusmods.com/diablo2resurrected/mods/456)
   - [Alternate Songs - The Desert](https://www.nexusmods.com/diablo2resurrected/mods/457)
   - [Alternate Songs - The Monastery](https://www.nexusmods.com/diablo2resurrected/mods/458)
+  - [Certified Hood Classic- Intended for use with overhaul mods.](https://www.nexusmods.com/diablo2resurrected/mods/110) (Rogue Encampment => Tristram)
 - Full OST music manager: also manage tracks not yet found in currently existing mods
 - Whatever else the community would like to see
