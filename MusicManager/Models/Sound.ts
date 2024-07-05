@@ -22,20 +22,26 @@ export class Sound {
   /**
    * TODO
    */
+  protected readonly hasHdSuffixInFileName: boolean;
+
+  /**
+   * TODO
+   */
   protected readonly hdSuffix: string = "_hd";
 
   /**
-   * 
+   * TODO
    * @param name The entry's value for the Sound column in sounds.txt.
    * @param filePath The SD path to the sound file.
    * @param fileName The name of the sound file.
    * @param fileExt The extension of the file.
    */
-  constructor(name: string, filePath: string, fileName: string, fileExt: string) {
+  constructor(name: string, filePath: string, fileName: string, fileExt: string, hasHdSuffixInFileName?: boolean) {
     this.name = name;
     this.filePath = filePath;
     this.fileName = fileName;
     this.fileExt = fileExt;
+    this.hasHdSuffixInFileName = hasHdSuffixInFileName ?? true;
   }
 
   /**
@@ -67,6 +73,6 @@ export class Sound {
    * @returns 
    */
   public getPathHd(): string {
-    return `${this.filePath}${this.fileName}${this.hdSuffix}${this.fileExt}`;
+    return `${this.filePath}${this.fileName}${this.hasHdSuffixInFileName ? this.hdSuffix : ""}${this.fileExt}`;
   }
 }

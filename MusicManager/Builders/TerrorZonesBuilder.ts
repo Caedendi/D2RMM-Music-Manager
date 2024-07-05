@@ -4,7 +4,7 @@ import { Sound } from "../Models/Sound";
 import { BaseMusicBuilder } from "./BaseMusicBuilder";
 import { IMusicBuilder } from "./Interfaces/IMusicBuilder";
 
-export class TerrorZoneBuilder extends BaseMusicBuilder implements IMusicBuilder {
+export class TerrorZonesBuilder extends BaseMusicBuilder implements IMusicBuilder {
   protected readonly pathCustom = `/assets/Terror Zones/music_desecrated/${FileConstants.extensionFlac}`;
   protected readonly pathSoundenvironTxt = `global/excel/soundenviron${FileConstants.extensionTxt}`;
   protected readonly tzMusicHandle = "ESOUNDENVIRON_INHERIT_DESECRATED";
@@ -21,7 +21,7 @@ export class TerrorZoneBuilder extends BaseMusicBuilder implements IMusicBuilder
     if (config.TerrorZonesMusic as string !== SettingsConstants.disabled)
       return;
     else if (config.TerrorZonesMusic as string === SettingsConstants.remove)
-      this.removeTerrorZoneMusic();
+      this.removeMusic();
     else if (config.TerrorZonesMusic as string === SettingsConstants.custom)
       this.setCustomMusic();
   }
@@ -29,7 +29,7 @@ export class TerrorZoneBuilder extends BaseMusicBuilder implements IMusicBuilder
   /**
    * Modifies soundenviron.txt to remove the entry for terror zone music.
    */
-  protected removeTerrorZoneMusic(): void {
+  protected removeMusic(): void {
     let file = D2RMM.readTsv(this.pathSoundenvironTxt);
 
     let index: number = file.rows.findIndex(row => row["Handle"] == this.tzMusicHandle);

@@ -36,13 +36,14 @@ export class AlternateSongsBuilder extends BaseMusicBuilder implements IMusicBui
   protected applyCryptTombSwitcheroo(): void {
     // this.copyAssets(this.pathSwitcheroo);
 
-    let newCrypt = new Sound(this.soundNameCrypt, this.pathAct2, this.fileNameTombs, FileConstants.extensionFlac);
-    let newTombs = new Sound(this.soundNameTombs, this.pathAct1, this.fileNameCrypt, FileConstants.extensionFlac);
+    let newCrypt = new Sound(this.soundNameCrypt, this.pathAct2, this.fileNameTombs, FileConstants.extensionFlac, false);
+    let newTombs = new Sound(this.soundNameTombs, this.pathAct1, this.fileNameCrypt, FileConstants.extensionFlac, false);
 
     this.modifySound(newCrypt);
     this.modifySound(newTombs);
   }
 
+  // TODO: add new asset instead of replace, and change sound entry to new asset
   protected applyTheDesert(): void {
     this.copyAssets(`${this.pathTheDesert}${config.AlternateSongsTheDesert as string}/`);
   }

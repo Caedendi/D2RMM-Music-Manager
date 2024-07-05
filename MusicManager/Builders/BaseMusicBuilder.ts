@@ -10,7 +10,7 @@ export abstract class BaseMusicBuilder implements IMusicBuilder {
   public abstract build(): void;
   
   /**
-   * Takes a path to a local folder with an hd and global folder structure containing music file assets to replace.
+   * Takes a path to a mod directory with an hd and global folder structure and copies its contents to the data directory.
    * @param assetsPath The path to the local folder containing hd and global folders with assets to copy.
    */
   protected copyAssets(assetsPath: string): void {
@@ -20,7 +20,7 @@ export abstract class BaseMusicBuilder implements IMusicBuilder {
   }
 
   /**
-   * Modifies an entry in sounds.txt to have the new values set in the provided sound.
+   * Modifies a sounds.txt entry and its hd variant to have the new values provided in sound.
    * @param sound The sound containing the information to be modified.
    */
   protected modifySound(sound: Sound): void {
