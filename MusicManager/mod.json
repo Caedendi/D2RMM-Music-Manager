@@ -1,0 +1,78 @@
+{
+  "name": "Music Manager [dev]",
+  "description": "A music manager.",
+  "author": "Caedendi",
+  "website": "https://www.nexusmods.com/diablo2resurrected/mods/361",
+  "version": "1.0.0-dev",
+  "config": [
+    {
+      "id": "IsCertifiedHoodClassicEnabled",
+      "type": "checkbox",
+      "name": "Certified Hood Classic by KROMXIII",
+      "description": "Changes Rogue Encampment's background music to Tristram.",
+      "defaultValue": false
+    },
+    {
+      "id": "TerrorZonesSection",
+      "type": "section",
+      "name": "Terror Zones",
+      "defaultExpanded": true
+    },
+    // {
+    //   "id": "IsRemoveTerrorZoneMusicEnabled",
+    //   "type": "checkbox",
+    //   "name": "No Terror Zone Music by NDState",
+    //   "description": "Restores the zone's original music when it is terrorized, so that you don't always have to listen to the same terror zone music all the time.",
+    //   "defaultValue": false
+    // },
+    {
+      "id": "TerrorZonesMusic",
+      "type": "select",
+      "name": "Terror Zones",
+      "description": "todo",
+      "defaultValue": "disabled",
+      "options": [
+        { "value": "disabled", "label": "No change" },
+        { "value": "remove",   "label": "Remove"    },
+        { "value": "custom",   "label": "custom"    }
+      ]
+    },
+    {
+      "id": "AlternateSongsSection",
+      "type": "section",
+      "name": "Alternate Songs by The Wandering Iterator",
+      "defaultExpanded": true
+    },
+    {
+      "id": "IsAlternateSongsCryptTombsSwitcherooEnabled",
+      "type": "checkbox",
+      "name": "Crypt-Tomb Switcheroo",
+      "description": "Switches the 'Egyptian'-sounding Act I crypt track with the subtler tomb track from Act II.",
+      "defaultValue": false
+    },
+    {
+      "id": "AlternateSongsTheDesert",
+      "type": "select",
+      "name": "The Desert",
+      "description": "I always found it strange that Act II's overworld zone had its soundtrack split between the general desert theme and the Canyon of the Magi theme. This mod addresses that by making them both the same song. The first one is a custom-edited 9 minute track that has all the sections from both songs seamlessly combined, and the second is an extra version I downloaded years ago, which is a 6 minute mix that features everything from the Canyon of the Magi theme but leaves out the last half of the general desert theme.",
+      "defaultValue": "disabled",
+      "options": [
+        { "value": "disabled",        "label": "Disable" },
+        { "value": "altmusicdesert1", "label": "altmusicdesert1" },
+        { "value": "altmusicdesert2", "label": "altmusicdesert2" }
+      ]
+    },
+    {
+      "id": "AlternateSongsTheMonastery",
+      "type": "checkbox",
+      "name": "The Monastery",
+      "description": "A chunk of the Monastery theme (about a minute from the start) is missing in-game. This might've been because that part of the song was also included in the pre-LoD main menu theme. This mod restores it. The first one is the full 6 minute track, and the second is my personal version that has the missing intro segment but not the 'choir' part in the middle of the song (that part creeped me out too much).",
+      "defaultValue": "disabled",
+      "options": [
+        { "value": "disabled",        "label": "Disable" },
+        { "value": "altmusicmonastery1", "label": "altmusicmonastery1" },
+        { "value": "altmusicmonastery2", "label": "altmusicmonastery2" }
+      ]
+    },
+  ]
+}
