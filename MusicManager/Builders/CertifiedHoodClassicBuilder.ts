@@ -4,7 +4,7 @@ import { Sound } from "../Models/Sound";
 import { BaseMusicBuilder } from "./BaseMusicBuilder";
 import { IMusicBuilder } from "./Interfaces/IMusicBuilder";
 
-export class MiscBuilder extends BaseMusicBuilder implements IMusicBuilder {
+export class CertifiedHoodClassicBuilder extends BaseMusicBuilder implements IMusicBuilder {
   protected readonly pathAct1 = `act1\\`;
 
   protected readonly soundNameRogueEncampment = `music_town_1`;
@@ -17,16 +17,13 @@ export class MiscBuilder extends BaseMusicBuilder implements IMusicBuilder {
     super();
   }
 
-  public build(): void {
-    if (!(config.CertifiedHoodClassic as string !== SettingsConstants.disabled))
-      this.applyCertifiedHoodClassic();
-  }
-
   /**
-   * Adds new files \global\music\common\desecrated_custom.flac and \hd\global\music\common\desecrated_custom_hd.flac
-   * and modifies the sounds.txt entries music_desecrated and music_desecrated_hd to use them.
+   * Changes the Rogue Encampment's music to the Tristram music. Optionally switches both.
    */
-  protected applyCertifiedHoodClassic(): void {
+  public build(): void {
+    if (config.CertifiedHoodClassic as string !== SettingsConstants.disabled)
+      return;
+
     let newRogueEncampment = new Sound(this.soundNameRogueEncampment, this.pathAct1, this.fileNameTristram, FileConstants.extensionFlac);
     this.modifySound(newRogueEncampment);
 
