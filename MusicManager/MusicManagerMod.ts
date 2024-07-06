@@ -1,6 +1,6 @@
 import { AlternateSongsBuilder } from "./Builders/AlternateSongsBuilder";
 import { IMusicBuilder } from "./Builders/Interfaces/IMusicBuilder";
-import { MiscBuilder } from "./Builders/MiscBuilder";
+import { CertifiedHoodClassicBuilder } from "./Builders/CertifiedHoodClassicBuilder";
 import { TerrorZonesBuilder } from "./Builders/TerrorZonesBuilder";
 
 export class MusicManagerMod {
@@ -10,7 +10,7 @@ export class MusicManagerMod {
     this.builders.push(
       new AlternateSongsBuilder(),
       new TerrorZonesBuilder(),
-      new MiscBuilder(),
+      new CertifiedHoodClassicBuilder(),
     );
   }
 

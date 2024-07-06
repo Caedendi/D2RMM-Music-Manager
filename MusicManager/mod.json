@@ -6,71 +6,192 @@
   "version": "1.0.0-dev",
   "config": [
     {
-      "id": "CertifiedHoodClassic",
-      "type": "select",
-      "name": "Certified Hood Classic by KROMXIII",
-      "description": "Changes the Rogue Encampment's background music to Tristram.",
-      "defaultValue": "disabled",
-      "options": [
-        { "value": "disabled", "label": "Disabled" },
-        { "value": "hood",     "label": "Enable" },
-        { "value": "switch",   "label": "Enable (switch both)" }
-      ]
-    },
-    {
-      "id": "TerrorZonesSection",
+      "id": "CertifiedHoodClassicSection",
       "type": "section",
-      "name": "Terror Zones",
-      "defaultExpanded": true
-    },
-    {
-      "id": "TerrorZonesMusic",
-      "type": "select",
-      "name": "Terror Zones",
-      "description": "todo",
-      "defaultValue": "disabled",
-      "options": [
-        { "value": "disabled", "label": "Disabled" },
-        { "value": "remove",   "label": "Remove"    },
-        { "value": "custom",   "label": "custom"    }
+      "name": "CertifiedHoodClassic by KROMXIII",
+      "defaultExpanded": false,
+      "children": [
+        {
+          "id": "CertifiedHoodClassic",
+          "type": "select",
+          "name": "Certified Hood Classic",
+          "description": "Changes the Rogue Encampment's background music to Tristram.",
+          "defaultValue": "disabled",
+          "options": [
+            { "value": "disabled", "label": "Disabled" },
+            { "value": "hood", "label": "Enable" },
+            { "value": "switch", "label": "Enable (switch both)" }
+          ]
+        }
       ]
     },
     {
       "id": "AlternateSongsSection",
       "type": "section",
       "name": "Alternate Songs by The Wandering Iterator",
-      "defaultExpanded": true
-    },
-    {
-      "id": "IsAlternateSongsCryptTombsSwitcherooEnabled",
-      "type": "checkbox",
-      "name": "Crypt-Tomb Switcheroo",
-      "description": "Switches the 'Egyptian'-sounding Act I crypt track with the subtler tombs track from Act II.",
-      "defaultValue": false
-    },
-    {
-      "id": "AlternateSongsTheDesert",
-      "type": "select",
-      "name": "The Desert",
-      "description": "I always found it strange that Act II's overworld zone had its soundtrack split between the general desert theme and the Canyon of the Magi theme. This mod addresses that by making them both the same song. The first one is a custom-edited 9 minute track that has all the sections from both songs seamlessly combined, and the second is an extra version I downloaded years ago, which is a 6 minute mix that features everything from the Canyon of the Magi theme but leaves out the last half of the general desert theme.",
-      "defaultValue": "disabled",
-      "options": [
-        { "value": "disabled",        "label": "Disable" },
-        { "value": "altmusicdesert1", "label": "altmusicdesert1" },
-        { "value": "altmusicdesert2", "label": "altmusicdesert2" }
+      "defaultExpanded": true,
+      "children": [
+        {
+          "id": "IsAlternateSongsCryptTombsSwitcherooEnabled",
+          "type": "checkbox",
+          "name": "Crypt-Tomb Switcheroo",
+          "description": "Switches the 'Egyptian'-sounding Act I crypt track with the subtler tombs track from Act II.",
+          "defaultValue": false
+        },
+        {
+          "id": "AlternateSongsTheDesert",
+          "type": "select",
+          "name": "The Desert",
+          "description": "I always found it strange that Act II's overworld zone had its soundtrack split between the general desert theme and the Canyon of the Magi theme. This mod addresses that by making them both the same song. The first one is a custom-edited 9 minute track that has all the sections from both songs seamlessly combined, and the second is an extra version I downloaded years ago, which is a 6 minute mix that features everything from the Canyon of the Magi theme but leaves out the last half of the general desert theme.",
+          "defaultValue": "disabled",
+          "options": [
+            { "value": "disabled", "label": "Disable" },
+            { "value": "altmusicdesert1", "label": "altmusicdesert1" },
+            { "value": "altmusicdesert2", "label": "altmusicdesert2" }
+          ]
+        },
+        {
+          "id": "AlternateSongsTheMonastery",
+          "type": "checkbox",
+          "name": "The Monastery",
+          "description": "A chunk of the Monastery theme (about a minute from the start) is missing in-game. This might've been because that part of the song was also included in the pre-LoD main menu theme. This mod restores it. The first one is the full 6 minute track, and the second is my personal version that has the missing intro segment but not the 'choir' part in the middle of the song (that part creeped me out too much).",
+          "defaultValue": "disabled",
+          "options": [
+            { "value": "disabled", "label": "Disable" },
+            { "value": "altmusicmonastery1", "label": "altmusicmonastery1" },
+            { "value": "altmusicmonastery2", "label": "altmusicmonastery2" }
+          ]
+        }
       ]
     },
     {
-      "id": "AlternateSongsTheMonastery",
-      "type": "checkbox",
-      "name": "The Monastery",
-      "description": "A chunk of the Monastery theme (about a minute from the start) is missing in-game. This might've been because that part of the song was also included in the pre-LoD main menu theme. This mod restores it. The first one is the full 6 minute track, and the second is my personal version that has the missing intro segment but not the 'choir' part in the middle of the song (that part creeped me out too much).",
-      "defaultValue": "disabled",
-      "options": [
-        { "value": "disabled",        "label": "Disable" },
-        { "value": "altmusicmonastery1", "label": "altmusicmonastery1" },
-        { "value": "altmusicmonastery2", "label": "altmusicmonastery2" }
+      "id": "TheMusicOfVariationSection",
+      "type": "section",
+      "name": "Terror Zones",
+      "defaultExpanded": false,
+      "children": [
+        {
+          "id": "TheMusicOfVariationSectionAct1SubSection",
+          "type": "section",
+          "name": "Act 1",
+          "defaultExpanded": false,
+          "children": [
+            {
+              "id": "IsTmovAct1Town1Enabled",
+              "type": "checkbox",
+              "name": "Rogue Encampment",
+              "description": "",
+              "defaultValue": false
+            },
+            {
+              "id": "IsTmovAct1WildernessEnabled",
+              "type": "checkbox",
+              "name": "Wilderness",
+              "description": "",
+              "defaultValue": false
+            },
+            {
+              "id": "IsTmovAct1TristramEnabled",
+              "type": "checkbox",
+              "name": "Tristram",
+              "description": "",
+              "defaultValue": false
+            },
+            {
+              "id": "IsTmovAct1CavesEnabled",
+              "type": "checkbox",
+              "name": "The Caves",
+              "description": "",
+              "defaultValue": false
+            },
+            {
+              "id": "IsTmovAct1CryptEnabled",
+              "type": "checkbox",
+              "name": "The Crypt",
+              "description": "",
+              "defaultValue": false
+            },
+            {
+              "id": "IsTmovAct1MonasteryEnabled",
+              "type": "checkbox",
+              "name": "Monastery",
+              "description": "",
+              "defaultValue": false
+            }
+          ]
+        },
+        {
+          "id": "TheMusicOfVariationSectionAct2SubSection",
+          "type": "section",
+          "name": "Act 2",
+          "defaultExpanded": false,
+          "children": [
+            {
+              "id": "IsTmovAct2Town2Enabled",
+              "type": "checkbox",
+              "name": "Lut Gholein",
+              "description": "",
+              "defaultValue": false
+            },
+            {
+              "id": "IsTmovAct2DesertEnabled",
+              "type": "checkbox",
+              "name": "Desert",
+              "description": "",
+              "defaultValue": false
+            }
+          ]
+        },
+        {
+          "id": "TheMusicOfVariationSectionAct4SubSection",
+          "type": "section",
+          "name": "Act 2",
+          "defaultExpanded": false,
+          "children": [
+            {
+              "id": "IsTmovAct4Town4Enabled",
+              "type": "checkbox",
+              "name": "Harrogath",
+              "description": "",
+              "defaultValue": false
+            },
+            {
+              "id": "IsTmovAct4MesaEnabled",
+              "type": "checkbox",
+              "name": "Mesa",
+              "description": "",
+              "defaultValue": false
+            }
+          ]
+        },
+        {
+          "id": "IsTmovIntroeditEnabled",
+          "type": "checkbox",
+          "name": "Main Menu",
+          "description": "",
+          "defaultValue": false
+        }
       ]
     },
+    {
+      "id": "TerrorZonesSection",
+      "type": "section",
+      "name": "Terror Zones",
+      "defaultExpanded": true,
+      "children": [
+        {
+          "id": "TerrorZonesMusic",
+          "type": "select",
+          "name": "Terror Zones",
+          "description": "todo",
+          "defaultValue": "disabled",
+          "options": [
+            { "value": "disabled", "label": "Disabled" },
+            { "value": "remove", "label": "Remove" },
+            { "value": "custom", "label": "custom" }
+          ]
+        }
+      ]
+    }
   ]
 }
