@@ -18,6 +18,9 @@ export class TheMusicOfVariationBuilder extends BaseMusicBuilder implements IMus
   }
 
   protected applyTown2LoopTimeOffset(): void {
+    // WyRuZzaH mentions on the downloads page: "I highly recommend download also "The Sounds of Variation (Sounds)" for edited music Datablocks, for better looping.. More in Main Description."
+    // But the only change from the vanilla files that is related to music is this.
+    //
     // sounds.txt row 4809
     // entry music_town_2_hd
     // column "Block 1" changed: -1 => 5322552

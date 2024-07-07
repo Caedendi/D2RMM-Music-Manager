@@ -29,7 +29,7 @@
       "id": "AlternateSongsSection",
       "type": "section",
       "name": "Alternate Songs by The Wandering Iterator",
-      "defaultExpanded": true,
+      "defaultExpanded": false,
       "children": [
         {
           "id": "IsAlternateSongsCryptTombsSwitcherooEnabled",
@@ -52,7 +52,7 @@
         },
         {
           "id": "AlternateSongsTheMonastery",
-          "type": "checkbox",
+          "type": "select",
           "name": "The Monastery",
           "description": "A chunk of the Monastery theme (about a minute from the start) is missing in-game. This might've been because that part of the song was also included in the pre-LoD main menu theme. This mod restores it. The first one is the full 6 minute track, and the second is my personal version that has the missing intro segment but not the 'choir' part in the middle of the song (that part creeped me out too much).",
           "defaultValue": "disabled",
@@ -67,7 +67,7 @@
     {
       "id": "TheMusicOfVariationSection",
       "type": "section",
-      "name": "Terror Zones",
+      "name": "The Music of Variation",
       "defaultExpanded": false,
       "children": [
         {
@@ -177,7 +177,7 @@
       "id": "TerrorZonesSection",
       "type": "section",
       "name": "Terror Zones",
-      "defaultExpanded": true,
+      "defaultExpanded": false,
       "children": [
         {
           "id": "TerrorZonesMusic",
